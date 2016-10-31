@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Basheer Becerra - Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Basheer Becerra's personal website." />
+<meta name="keywords"
+	content="Basheer, Becerra, Bash, developer, entrepreneur, researcher" />
+<meta name="author" content="Basheer Becerra" />
+
+<!-- Facebook and Twitter integration -->
+<meta property="og:title" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:image" content="" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:card" content="" />
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="shortcut icon" href="favicon.ico"></link>
+
+<!-- Google Fonts -->
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700'
+	rel='stylesheet' type='text/css'></link>
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="css/animate.css"></link>
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="css/icomoon.css"></link>
+<!-- Magnific Popup-->
+<link rel="stylesheet" href="css/magnific-popup.css"></link>
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="css/owl.carousel.min.css"></link>
+<link rel="stylesheet" href="css/owl.theme.default.min.css"></link>
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.css"></link>
+
+<!-- Cards -->
+<link rel="stylesheet" href="css/cards.css"></link>
+
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+<script>
+	(function(i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function() {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script',
+			'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-84736265-1', 'auto');
+	ga('send', 'pageview');
+</script>
+</head>
+<body>
+
+	<div id="fh5co-page">
+		<nav class="fh5co-nav-style-1" role="navigation"
+			data-offcanvass-position="fh5co-offcanvass-left">
+			<div class="container">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
+					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
+					<a href="#">Basheer Becerra</a>
+				</div>
+				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
+					<ul data-offcanvass="yes">
+						<li><a th:href="@{/home}">Home</a></li>
+						<li class="active"><a href="#">Resume</a></li>
+						<li><a th:href="@{/portfolio}">Portfolio</a></li>
+						<li><a th:href="@{/aboutme}">About Me</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
+					<ul class="fh5co-special" data-offcanvass="yes">
+						<li><a th:href="@{/contact}" class="call-to-action">Contact
+								Me</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="fh5co-cover fh5co-cover-style-2 js-full-height"
+			data-stellar-background-ratio="0.5" data-next="yes"
+			style="background-image: url(images/bg-bash.jpg);">
+			<span class="scroll-btn wow fadeInUp" data-wow-duration="1s"
+				data-wow-delay="1.4s"> <a href="#"> <span class="mouse"><span></span></span>
+			</a>
+			</span>
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover-text">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-push-6 col-md-6 full-height js-full-height">
+							<div class="fh5co-cover-intro">
+								<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s"
+									data-wow-delay=".5s">Resume</h1>
+								<h2 class="cover-text-sublead wow fadeInUp"
+									data-wow-duration="1s" data-wow-delay=".8s">
+									Below is the web version of my current resume. This web page <i>only</i>
+									includes experiences after high school graduation in 2015. To
+									view the official PDF version of my resume, please request by <a
+										th:href="@{/contact}">contacting me</a>
+								</h2>
+								<p class="wow fadeInUp" data-wow-duration="1s"
+									data-wow-delay="1.1s">
+									<button class="btn btn-primary btn-outline btn-lg learn-btn">View
+										Resume Below</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fh5co-project-style-2">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".5s">Work Experience</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".8s">
+							Below is a list of my relevant work experience. For any specific
+							questions on an experience, please <a th:href="@{/contact}">contact
+								me</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-projects">
+				<ul>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_4.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.4s"
+						data-stellar-background-ratio="0.5"><a
+						href="https://www.statefarm.com/careers/become-an-intern/IT-internships"
+						target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Systems Intern</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">State Farm</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>May 2015 - Present</i>
+												</h3>
+											</div>
+											<div class="col-md-6">
+												<p>Designed, developed, and tested new and/or modified
+													existing web based applications in languages such as J2EE,
+													.NET, etc. Analyzed the technical and business
+													requirements, including functional and non-functional
+													requirements, to develop a systems solution. Handled
+													migration of applications from mainframe languages to web
+													based languages. Included coding or using development
+													knowledge in designing, building or integration, for the
+													majority of the work. Provided system software support for
+													State Farm web applications and components.</p>
+												<p>Click for more information on State Farm's Internship</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_2.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.7s"
+						data-stellar-background-ratio="0.5"><a
+						href="http://www.ilstu.edu" target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Web Application Developer</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">Illinois
+													State University</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>March 2016 - Present</i>
+												</h3>
+											</div>
+											<div class="col-md-6">
+												<p>Working on the back-end (server code) and front-end
+													(browser code) of an event registration application for the
+													Katie School of Insurance in Illinois State University.
+													Leading the application development through the Agile
+													methodology by organizing iterations/sprints, user stories,
+													user tasks, stand-ups, etc.</p>
+												<p>Click for more information on ISU</p>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fh5co-project-style-2">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".5s">Education</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".8s">
+							Below is a list of my recent education. For any specific
+							questions on a school, please <a th:href="@{/contact}">contact
+								me</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-projects">
+				<ul>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_4.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.4s"
+						data-stellar-background-ratio="0.5"><a
+						href="http://www.ilstu.edu" target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Illinois State University</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">Sophomore
+													| 2015 - 2019 (Expected Grad. Date)</h3>
+												<br />
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>Major: Computer Science</i>
+												</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>Minor: Mathematics</i>
+												</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>Minor: Biological Sciences</i>
+												</h3>
+											</div>
+											<div class="col-md-6">
+												<p>Click to view Illinois State University's website.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_2.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.7s"
+						data-stellar-background-ratio="0.5"><a
+						href="http://www.uhigh.ilstu.edu" target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>University High School</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">2011 -
+													2015 (Graduated)</h3>
+											</div>
+											<div class="col-md-6">
+												<p>Click to view University High School's website.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fh5co-project-style-2">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".5s">Volunteer Experience</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".8s">
+							Below is a list of my relevant volunteer experience. For any
+							specific questions on an experience, please <a
+								th:href="@{/contact}">contact me</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-projects">
+				<ul>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_4.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.4s"
+						data-stellar-background-ratio="0.5"><a
+						href="http://www.bdpa.org/page/SITES_HSCC" target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>HSCC IT Mentor</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">BDPA</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>October 2015 - Present</i>
+												</h3>
+											</div>
+											<div class="col-md-6">
+												<p>My role is to prepare and mentor high-school students
+													for the High School Computer Competition (HSCC) which
+													involves knowledge of web development, application
+													development, database design, and database development.
+													I've also presented the mentorship on behalf of BDPA to 50+
+													individuals. Contributed around 150+ hours of volunteering
+													to BDPA. High school team accomplished 3rd place at the
+													national HSCC event.</p>
+												<p>Click for more information on HSCC</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_2.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.7s"
+						data-stellar-background-ratio="0.5"><a
+						href="http://www.soill.org/" target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>Special Olympics Team Volunteer</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">El Paso
+													Gridley CUSD #11</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>October 2014 - August 2015</i>
+												</h3>
+											</div>
+											<div class="col-md-6">
+												<p>Helped train and support the school's Special
+													Olympics team in basketball, soccer, softball, track, etc.
+													Around 30+ hours of volunteering to El Paso's Special
+													Olympics team.</p>
+												<p>Click for more information on Special Olympics.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+					<li class="wow fadeInUp"
+						style="background-image: url(images/full_3.jpg);"
+						data-wow-duration="1s" data-wow-delay="1.7s"
+						data-stellar-background-ratio="0.5"><a
+						href="http://www.edit.illinoisstate.edu/" target="_blank">
+							<div class="fh5co-overlay"></div>
+							<div class="container">
+								<div class="fh5co-text">
+									<div class="fh5co-text-inner">
+										<div class="row">
+											<div class="col-md-6">
+												<h3>EDIT Presenter and Volunteer</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">State Farm</h3>
+												<h3 style="font-size: 1.0em; color: #E6E6E6">
+													<i>Summer of 2015 and 2016</i>
+												</h3>
+											</div>
+											<div class="col-md-6">
+												<p>Presented on web technologies to passionate high
+													school students. Around 20+ hours of volunteering to EDIT.</p>
+												<p>Click for more information on EDIT</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<div class="fh5co-features-style-2">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".5s">Skills</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".8s">
+							Below is a list of my relevant skills. For any specific questions
+							on a skill, please <a th:href="@{/contact}">contact me</a>.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div
+						class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="1.1s">
+						<div class="fh5co-icon">
+							<i class="icon-code"></i>
+						</div>
+						<div class="fh5co-desc">
+							<h3>Programming</h3>
+							<p>I have been programming consistently for 3 years. Mainly
+								focused in Java web application development using the Spring
+								framework. Also have knowledge in HTML, CSS, JavaScript, jQuery,
+								C++, C#, SQL, and other fundamental technologies.</p>
+						</div>
+					</div>
+					<div
+						class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="1.4s">
+						<div class="fh5co-icon">
+							<i class="icon-clipboard"></i>
+						</div>
+						<div class="fh5co-desc">
+							<h3>Project Management</h3>
+							<p>Experience in Waterfall and Agile project management. As a
+								developer for ISU, I took part in project management by
+								organizing stories and tasks and ensuring that teammates are on
+								the same page. Also during my State Farm internship, I have lead
+								several standups and retrospectives.</p>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block visible-xs-block"></div>
+					<div
+						class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="1.7s">
+						<div class="fh5co-icon">
+							<i class="icon-pencil"></i>
+						</div>
+						<div class="fh5co-desc">
+							<h3>Mentoring/Teaching</h3>
+							<p>For my volunteer experience at HSCC, I have mentored and
+								taught a class of 13+ students on web development technologies.
+								I am also a peer mentor for the University Scholarship Program
+								where I support a freshmen during his/her first year.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div
+						class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="2s">
+						<div class="fh5co-icon">
+							<i class="icon-video"></i>
+						</div>
+						<div class="fh5co-desc">
+							<h3>Speaking/Presenting</h3>
+							<p>As the sum of all my work experiences, volunteer
+								experiences, and extracurricular activities, I had a numerous
+								amount of events where I presented on a variety of topics.</p>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block visible-xs-block"></div>
+					<div
+						class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="2.3s">
+						<div class="fh5co-icon">
+							<i class="icon-calendar"></i>
+						</div>
+						<div class="fh5co-desc">
+							<h3>Organization &amp; Time Management</h3>
+							<p>As I result of the numerous amount of experiences I have
+								partook in, I've created my own system for calendar and time
+								management, personal organization, etc.</p>
+						</div>
+					</div>
+					<div
+						class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="2.6s">
+						<div class="fh5co-icon">
+							<i class="icon-star"></i>
+						</div>
+						<div class="fh5co-desc">
+							<h3>Several More</h3>
+							<p>
+								There are several more noteworthy skills to mention. Some
+								include video editing, collaboration, entrepreneurship, equity
+								investing, scientific research, etc. If you're interested on if
+								I have experience in a particular skill, please <a
+									th:href="@{/contact}">contact me</a>.
+							</p>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block visible-xs-block"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-features-style-1"
+			style="background-image: url(images/full_4.jpg);"
+			data-stellar-background-ratio="0.5">
+			<div class="fh5co-overlay"></div>
+			<div class="container" style="z-index: 3; position: relative;">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay=".5s">
+						<h2 class="fh5co-heading">Accomplishments and Awards</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="fh5co-features">
+						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".8s">
+							<div class="icon">
+								<i class="icon-code"></i>
+							</div>
+							<h3>State Farm Hackathon Winner</h3>
+							<p>Winner of State Farm's employee-only hackathon out of 120+
+								total teams. Judged during a company-wide broadcasted event by
+								an panel of State Farm executives/judges. Idea is currently in
+								R&amp;D.</p>
+						</div>
+						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay="1.1s">
+							<div class="icon">
+								<i class="icon-briefcase"></i>
+							</div>
+							<h3>ISU Honors Council</h3>
+							<p>One of the six selected among the entirety of Illinois
+								State University's Honors Program to represent the student base
+								in regards to important program decisions.</p>
+						</div>
+						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay="1.4s">
+							<div class="icon">
+								<i class="icon-ribbon"></i>
+							</div>
+							<h3>HSCC Nationals 3rd Place</h3>
+							<p>
+								Mentored a team of high school students for the High School
+								Coding Competition (HSCC) who placed 3rd at the national
+								competition, the first time our local chapter placed out of the
+								13 years of running. For more information, read <a
+									href="http://www.videtteonline.com/news/isu-student-helps-local-high-school-place-third/article_3e2616be-79f6-11e6-a405-e339c60928f3.html"
+									target="_blank">this article</a>.
+							</p>
+						</div>
+
+						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay="1.7s">
+							<div class="icon">
+								<i class=" icon-certificate"></i>
+							</div>
+							<h3>ISU Dean's List Recipient</h3>
+							<p>Recipient of the ISU Dean's list for all past semesters.
+								Requirements: 12 course credits and GPA in the top 10% of the
+								respective College.</p>
+						</div>
+						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay="2s">
+							<div class="icon">
+								<i class="icon-certificate"></i>
+							</div>
+							<h3>John Deere Scholarship in Computer Science Recipient</h3>
+							<p>Recipient of the John Deere Scholarship in Computer
+								Science.</p>
+						</div>
+						<div class="fh5co-feature wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay="2.3s">
+							<div class="icon">
+								<i class="icon-certificate"></i>
+							</div>
+							<h3>ISU University Scholarship Recipient</h3>
+							<p>Recipient of the University Scholarship. Recognizes
+								underrepresented students who have overcome hardship in
+								achieving their academic success.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="fh5co-blog-style-1">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".5s">View Other Pages</h2>
+						<p class="wow fadeInUp" data-wow-duration="1s"
+							data-wow-delay=".8s">Click on one of the following thumbnails
+							to navigate to my other pages!</p>
+					</div>
+				</div>
+				<div class="row p-b">
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<div class="fh5co-post wow fadeInLeft" data-wow-duration="1s"
+							data-wow-delay="1.1s">
+							<div class="fh5co-post-image">
+								<div class="fh5co-overlay"></div>
+								<div class="fh5co-category">
+									<a href="#">Open</a>
+								</div>
+								<img src="images/headshot-bash.jpg" alt="Image"
+									class="img-responsive" />
+							</div>
+							<div class="fh5co-post-text">
+								<h3>
+									<a href="#">Résumé</a>
+								</h3>
+								<p>Review my skills, experiences, and traits.</p>
+							</div>
+							<div class="fh5co-post-meta">
+								<a href="#"><i class="icon-clock2"></i>Résumé last updated
+									on 9/24/16</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<div class="fh5co-post wow fadeInLeft" data-wow-duration="1s"
+							data-wow-delay="1.4s">
+							<div class="fh5co-post-image">
+								<div class="fh5co-overlay"></div>
+								<div class="fh5co-category">
+									<a th:href="@{/portfolio}">Open</a>
+								</div>
+								<img src="images/code-bash.jpg" alt="Image"
+									class="img-responsive" />
+							</div>
+							<div class="fh5co-post-text">
+								<h3>
+									<a th:href="@{/portfolio}">Portfolio</a>
+								</h3>
+								<p>Review my past, present, and future projects.</p>
+							</div>
+							<div class="fh5co-post-meta">
+								<a th:href="@{/portfolio}"><i class="icon-clock2"></i>Portfolio
+									last updated on 9/24/16</a>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+						<div class="fh5co-post wow fadeInLeft" data-wow-duration="1s"
+							data-wow-delay="1.7s">
+							<div class="fh5co-post-image">
+								<div class="fh5co-overlay"></div>
+								<div class="fh5co-category">
+									<a th:href="@{/aboutme}">Open</a>
+								</div>
+								<a th:href="@{/aboutme}"> <img src="images/personal-bash.jpg"
+									alt="Image" class="img-responsive" />
+								</a>
+							</div>
+							<div class="fh5co-post-text">
+								<h3>
+									<a th:href="@{/aboutme}">About Me</a>
+								</h3>
+								<p>Learn a little more of my personal side.</p>
+							</div>
+							<div class="fh5co-post-meta">
+								<a th:href="@{/aboutme}"><i class="icon-clock2"></i>About Me
+									last updated on 9/24/2016</a>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4 text-center wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay="2s">
+						<a th:href="@{/contact}" class="btn btn-primary btn-lg">Contact
+							Me</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-footer-style-3">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay=".5s">
+						<div class="fh5co-logo">Created by Basheer</div>
+						<p class="fh5co-copyright">
+							&copy; 2016 Basheer Becerra <br />All Rights Reserved.
+						</p>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay=".5s">
+						<h3>Professional Accounts</h3>
+						<ul class="fh5co-links fh5co-social">
+							<li><a href="https://www.linkedin.com/in/basheerbecerra"
+								target="_blank"><i class="icon icon-linkedin"></i> Linkedin</a></li>
+						</ul>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay=".5s">
+						<h3>Developer Accounts</h3>
+						<ul class="fh5co-links fh5co-social">
+							<li><a href="http://www.github.com/CodingBash"
+								target="_blank"><i class="icon icon-github"></i> GitHub</a></li>
+							<li><a
+								href="http://www.stackoverflow.com/users/3995603/codingbash"
+								target="_blank"><i class="icon icon-stack-overflow"></i>
+									Stack Overflow</a></li>
+						</ul>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
+						data-wow-duration="1s" data-wow-delay=".5s">
+						<h3>Social Accounts</h3>
+						<ul class="fh5co-links fh5co-social">
+							<li><a href="#" target="_blank"><i
+									class="icon icon-facebook"></i> Facebook</a></li>
+							<li><a href="#" target="_blank"><i
+									class="icon icon-twitter"></i> Twitter</a></li>
+							<li><a href="#" target="_blank"><i
+									class="icon icon-youtube"></i> YouTube</a></li>
+						</ul>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+				</div>
+				<div class="row fh5co-made">
+					<div class="col-md-12 wow fadeInUp" data-wow-duration="1s"
+						data-wow-delay=".5s">
+						<p>Made by Basheer Becerra</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END footer -->
+
+
+
+	</div>
+	<!-- END page-->
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- WOW -->
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+</body>
+</html>
