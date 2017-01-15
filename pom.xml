@@ -6,16 +6,16 @@
 	<groupId>com.basheerbecerra</groupId>
 	<artifactId>bash-personal-website</artifactId>
 	<version>1.0.0-RELEASE</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>bash-personal-website</name>
 	<description>Personal website for Basheer Becerra</description>
 
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.1.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>1.4.3.RELEASE</version>
 	</parent>
 
 	<properties>
@@ -27,13 +27,22 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 
@@ -44,16 +53,52 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.github.jsimone</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>8.0.24.0</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>1.1.2</version>
 				<configuration>
 					<processTypes>
 						<web>java $JAVA_OPTS -cp target/classes:target/dependency/*
-							TwitterMemebotApplication</web>
+							BashPersonalWebsiteApplication</web>
 					</processTypes>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
