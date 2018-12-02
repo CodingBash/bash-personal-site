@@ -9,9 +9,10 @@ public class MainController {
 
 	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
 	public String home() {
-		return "home";
+		return "newhome";
 	}
 
+	/*
 	@RequestMapping(value = { "/aboutme" }, method = RequestMethod.GET)
 	public String aboutme() {
 		return "aboutme";
@@ -31,5 +32,7 @@ public class MainController {
 	public String resume() {
 		return "resume";
 	}
+	
+	*/
 
 }
