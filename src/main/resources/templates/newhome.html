@@ -45,6 +45,16 @@
 
 <!-- Modernizr JS -->
 <script src="js/modernizr-2.6.2.min.js"></script>
+
+<!-- custom scrollbar CSS -->
+<link rel="stylesheet"
+	href="http://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css" />
+<!-- jQuery lib -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- custom scrollbar plugin script -->
+<script src="http://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
 <!-- FOR IE9 below -->
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -63,6 +73,29 @@
 
 	ga('create', 'UA-84736265-1', 'auto');
 	ga('send', 'pageview');
+</script>
+<script>
+	(function($) {
+		$(window).load(function() {
+			/* initialize scrollbar */
+			$("#twitter-widget-holder").mCustomScrollbar({
+				theme : "dark-3",
+				scrollButtons : {
+					enable : true
+				}
+			});
+			/* insert twitter widget js in window load fn */
+			!function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + "://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			}(document, "script", "twitter-wjs");
+		});
+	})(jQuery);
 </script>
 <style type="text/css">
 .align-items-center {
@@ -137,6 +170,15 @@ blockquote.twitter-tweet a:hover, blockquote.twitter-tweet a:focus {
 
 .panel {
 	margin-top: 25px;
+}
+
+#twitter-widget-holder {
+	max-height: 400px;
+	max-width: 320px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
 }
 </style>
 </head>
@@ -606,9 +648,7 @@ blockquote.twitter-tweet a:hover, blockquote.twitter-tweet a:focus {
 			</div>
 		</div>
 
-
-
-
+		<!-- 
 		<div class="container">
 			<div class="row p-b">
 				<div class="col-md-6  col-md-offset-6 text-center">
@@ -620,41 +660,22 @@ blockquote.twitter-tweet a:hover, blockquote.twitter-tweet a:focus {
 				<div class="col-md-6 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
 					style="text-align: center;">
 					<div class="row">
-						<div class="col-md-4"></div>
-						<div class="container">
-							<div class="col-md-4">
-								<div class="panel panel-danger">
-									<div class="panel-heading">
-										<h3 class="panel-title">
-											<i class="fa fa-twitter-square" aria-hidden="true"></i>Live Tweets by Basheer
-										</h3>
-									</div>
-									<div class="panel-body">
-										<a class="twitter-timeline" data-width="100%" href="https://twitter.com/codingbash">Tweets
-											by Basheer</a>
-									</div>
-								</div>
-							</div>
+						<div id="twitter-widget-holder">
+							<a class="twitter-timeline" href="https://twitter.com/CodingBash?ref_src=twsrc%5Etfw">Tweets
+								by CodingBash</a>
+							<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						</div>
-						<div class="col-md-4"></div>
 					</div>
 					<script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 
 				<div class="col-md-6">
-					<div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s">
-						<p>
-							View my scientific/professional profile on Twitter: <a
-								href="http://wwwi.twitter.com/codingbash" target="_blank">http://wwwi.twitter.com/codingbash</a>
-						</p>
-					</div>
+					<div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"></div>
 				</div>
 			</div>
 		</div>
 
-
-
-
+ -->
 
 		<th:block th:include="fragments/fragments :: footer"></th:block>
 	</div>
