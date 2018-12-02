@@ -13,16 +13,15 @@ public class MainController {
 	}
 
 	/*
-	@RequestMapping(value = { "/aboutme" }, method = RequestMethod.GET)
-	public String aboutme() {
-		return "aboutme";
-	}
-
+	 * @RequestMapping(value = { "/aboutme" }, method = RequestMethod.GET)
+	 * public String aboutme() { return "aboutme"; }
+	 */
 	@RequestMapping(value = { "/contact" }, method = RequestMethod.GET)
 	public String contact() {
 		return "contact";
 	}
 
+	/*
 	@RequestMapping(value = { "/portfolio" }, method = RequestMethod.GET)
 	public String portfolio() {
 		return "portfolio";
@@ -32,7 +31,7 @@ public class MainController {
 	public String resume() {
 		return "resume";
 	}
-	
+
 	*/
 
 }
