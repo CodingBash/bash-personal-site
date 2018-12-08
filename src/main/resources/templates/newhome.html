@@ -74,29 +74,6 @@
 	ga('create', 'UA-84736265-1', 'auto');
 	ga('send', 'pageview');
 </script>
-<script>
-	(function($) {
-		$(window).load(function() {
-			/* initialize scrollbar */
-			$("#twitter-widget-holder").mCustomScrollbar({
-				theme : "dark-3",
-				scrollButtons : {
-					enable : true
-				}
-			});
-			/* insert twitter widget js in window load fn */
-			!function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-				if (!d.getElementById(id)) {
-					js = d.createElement(s);
-					js.id = id;
-					js.src = p + "://platform.twitter.com/widgets.js";
-					fjs.parentNode.insertBefore(js, fjs);
-				}
-			}(document, "script", "twitter-wjs");
-		});
-	})(jQuery);
-</script>
 <style type="text/css">
 .align-items-center {
 	display: flex;
@@ -648,7 +625,6 @@ blockquote.twitter-tweet a:hover, blockquote.twitter-tweet a:focus {
 			</div>
 		</div>
 
-		<!-- 
 		<div class="container">
 			<div class="row p-b">
 				<div class="col-md-6  col-md-offset-6 text-center">
@@ -660,22 +636,41 @@ blockquote.twitter-tweet a:hover, blockquote.twitter-tweet a:focus {
 				<div class="col-md-6 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
 					style="text-align: center;">
 					<div class="row">
-						<div id="twitter-widget-holder">
-							<a class="twitter-timeline" href="https://twitter.com/CodingBash?ref_src=twsrc%5Etfw">Tweets
-								by CodingBash</a>
-							<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-						</div>
+						<a class="twitter-timeline" data-width="500" data-height="700" data-theme="light"
+							href="https://twitter.com/CodingBash?ref_src=twsrc%5Etfw">Tweets by CodingBash</a>
+						<script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
-					<script async="async" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</div>
 
 				<div class="col-md-6">
-					<div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"></div>
+					<div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s">
+						<p>
+							To best reach out and support others, I have made online presence an important aspect of my
+							personal brand. Along with maintaining an active <a href="https://www.twitter.com/codingbash"
+								target="_blank">science/professional Twitter profile</a>, I also have a <a
+								href="https://www.linkedin.com/in/basheerbecerra" target="_blank">LinkedIn</a> and <a
+								href="http://www.github.com/CodingBash" target="_blank">GitHub account</a> to showcase my
+							work. I even have a <a href="https://www.youtube.com/codingbash" target="_blank">YouTube
+								channel</a> with half-a-million views with IT-related videos. Very soon, I plan on starting a
+							blog to discuss computer science, computational biology, and self-help for graduate students.
+						</p>
+						<br />
+						<p>
+							Feel free to contact me <a th:href="@{/contact}">here</a>.
+						</p>
+						<br />
+						<p>
+							To view my CV, <a href="https://1drv.ms/b/s!Ai1NY1dgN1aihskC5DFYEkLxThh1gQ" target="_blank">click
+								here</a>.
+						</p>
+						<div>
+							<iframe src="https://onedrive.live.com/embed?cid=A256376057634D2D&amp;resid=A256376057634D2D%21107650&amp;authkey=AEjzKNTeMlETzYA&amp;em=2"
+								width="100%" height="288" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-
- -->
 
 		<th:block th:include="fragments/fragments :: footer"></th:block>
 	</div>
