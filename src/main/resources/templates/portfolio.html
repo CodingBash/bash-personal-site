@@ -5,286 +5,967 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" xmlns:th="http://www.thymeleaf.org">
 <!--<![endif]-->
+
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Basheer Becerra - Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Basheer Becerra's personal website." />
-<meta name="keywords"
-	content="Basheer, Becerra, Bash, developer, entrepreneur, researcher" />
-<meta name="author" content="Basheer Becerra" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Basheer Becerra</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Basheer Becerra's personal website." />
+	<meta name="keywords" content="Basheer, Becerra, Bash, Harvard, PhD, Bioinformatics" />
+	<meta name="author" content="Basheer Becerra" />
 
-<!-- Facebook and Twitter integration -->
-<meta property="og:title" content="" />
-<meta property="og:image" content="" />
-<meta property="og:url" content="" />
-<meta property="og:site_name" content="" />
-<meta property="og:description" content="" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:image" content="" />
-<meta name="twitter:url" content="" />
-<meta name="twitter:card" content="" />
+	<!-- Twitter Card -->
+	<meta name="og:title" content="Basheer's Personal Website" />
+	<meta name="og:image" content="https://www.basheerbecerra.com/images/new_images/tall_professional_pic.jpg" />
+	<meta name="og:url" content="https://www.basheerbecerra.com/" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@basheerbecerra" />
+	<meta name="og:description" content="Basheer Becerra's personal website" />
 
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<link rel="shortcut icon" href="favicon.ico"></link>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	</link>
 
-<!-- Google Fonts -->
-<link
-	href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700'
-	rel='stylesheet' type='text/css'></link>
+	<!-- Google Fonts -->
+	<link
+		href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700'
+		rel='stylesheet' type='text/css'>
+	</link>
 
-<!-- Animate.css -->
-<link rel="stylesheet" href="css/animate.css"></link>
-<!-- Icomoon Icon Fonts-->
-<link rel="stylesheet" href="css/icomoon.css"></link>
-<!-- Magnific Popup-->
-<link rel="stylesheet" href="css/magnific-popup.css"></link>
-<!-- Owl Carousel -->
-<link rel="stylesheet" href="css/owl.carousel.min.css"></link>
-<link rel="stylesheet" href="css/owl.theme.default.min.css"></link>
-<!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.css"></link>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	</link>
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	</link>
+	<!-- Magnific Popup-->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	</link>
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	</link>
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	</link>
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	</link>
 
-<!-- Cards -->
-<link rel="stylesheet" href="css/cards.css"></link>
+	<!-- Cards -->
+	<link rel="stylesheet" href="css/cards.css">
+	</link>
 
-<!-- Modernizr JS -->
-<script src="js/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<!-- custom scrollbar CSS -->
+	<link rel="stylesheet" href="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.min.css" />
+
+	<!-- jQuery lib -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<!-- custom scrollbar plugin script -->
+	<script src="https://malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HTE4RKND68" th:inline="none"></script>
+	<script th:inline="none">
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-HTE4RKND68');
+	</script>
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<style type="text/css">
+		.align-items-center {
+			display: flex;
+			align-items: center;
+			/*Aligns vertically center */
+			justify-content: center;
+			/*Aligns horizontally center */
+		}
+	</style>
+	<style>
+		blockquote.twitter-tweet {
+			display: inline-block;
+			font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 16px;
+			border-color: #eee #ddd #bbb;
+			border-radius: 5px;
+			border-style: solid;
+			border-width: 1px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+			margin: 10px 5px;
+			padding: 0 16px 16px 16px;
+			max-width: 468px;
+		}
 
-<script>
-	(function(i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function() {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date();
-		a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script',
-			'https://www.google-analytics.com/analytics.js', 'ga');
+		blockquote.twitter-tweet p {
+			font-size: 16px;
+			font-weight: normal;
+			line-height: 20px;
+		}
 
-	ga('create', 'UA-84736265-1', 'auto');
-	ga('send', 'pageview');
-</script>
+		blockquote.twitter-tweet a {
+			color: inherit;
+			font-weight: normal;
+			text-decoration: none;
+			outline: 0 none;
+		}
+
+		blockquote.twitter-tweet a:hover,
+		blockquote.twitter-tweet a:focus {
+			text-decoration: underline;
+		}
+
+		#twitter-widget-holder {
+			max-height: 400px;
+			max-width: 320px;
+			padding: 20px;
+			background: #fff;
+			border-radius: 3px;
+			box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
+		}
+
+		.twitter-timeline {
+			max-width: 100%;
+			max-height: 1000px;
+		}
+
+		.fa {
+			font-size: 25px;
+			color: #FFFFFF;
+		}
+
+		.panel-title {
+			font-size: 25px;
+			color: #FFFFFF;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		.panel-heading {
+			background-color: #1da1f2 !important;
+			;
+			color: #1da1f2 !important;
+			;
+		}
+
+		.panel {
+			margin-top: 25px;
+		}
+
+		#twitter-widget-holder {
+			max-height: 400px;
+			max-width: 320px;
+			padding: 20px;
+			background: #fff;
+			border-radius: 3px;
+			box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
+		}
+	</style>
 </head>
+
 <body>
 
 	<div id="fh5co-page">
-		<nav class="fh5co-nav-style-1" role="navigation"
-			data-offcanvass-position="fh5co-offcanvass-left">
+		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
 			<div class="container">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
-					<a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-					<a href="#">Basheer Becerra</a>
+
 				</div>
 				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
-					<ul data-offcanvass="yes">
-						<li><a th:href="@{/home}">Home</a></li>
-						<li><a th:href="@{/resume}">Resume</a></li>
-						<li class="active"><a href="#">Portfolio</a></li>
-						<li><a th:href="@{/aboutme}">About Me</a></li>
-					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-4 text-right fh5co-link-wrap">
 					<ul class="fh5co-special" data-offcanvass="yes">
-						<li><a th:href="@{/contact}" class="call-to-action">Contact
+						<li><a th:href="@{/}" class="call-to-action">Return to Home Page</a></li>
+						<li><a href="mailto:bbecerra@fas.harvard.edu" class="call-to-action">Contact
 								Me</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-		<div class="fh5co-cover fh5co-cover-style-2 js-full-height"
-			data-stellar-background-ratio="0.5" data-next="yes"
-			style="background-image: url(images/bg-bash.jpg);">
-			<span class="scroll-btn wow fadeInUp" data-wow-duration="1s"
-				data-wow-delay="1.4s"> <a href="#"> <span class="mouse"><span></span></span>
-			</a>
-			</span>
-			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover-text">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-push-6 col-md-6 full-height js-full-height">
-							<div class="fh5co-cover-intro">
-								<h1 class="cover-text-lead wow fadeInUp" data-wow-duration="1s"
-									data-wow-delay=".5s">Portfolio</h1>
-								<h2 class="cover-text-sublead wow fadeInUp"
-									data-wow-duration="1s" data-wow-delay=".8s">
-									Page is currently in construction. For interested viewers,
-									please request a description of my portfolio by <a
-										th:href="@{/contact}">contacting me</a>.
-								</h2>
-								<p class="wow fadeInUp hidden" data-wow-duration="1s"
-									data-wow-delay="1.1s">
-									<button class="btn btn-primary btn-outline btn-lg learn-btn">View
-										Portfolio Below</button>
-								</p>
-							</div>
-						</div>
+		<div class="fh5co-project-style-2">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-12 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">Portfolio
+						</h2>
+					</div>
+				</div>
+
+
+				<div class="row p-b">
+					<div class="col-md-4" style="text-align: center;">
+						<img src="images/labphoto.jpeg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 800px; max-width: 300px;" />
+					</div>
+					<div class="col-md-8">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+							style="color: #040947; margin-top: 25px;">
+							<span style="font-size: 25px;">Description of select projects</span>
+						</p>
+						<ul class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s">
+							<li style="padding-top: 15px"><span style="font-size: 20px;">Establishing a CRISPR-based
+									variant-to-function assay, applied to CD19 enhancer</span><br /><a
+									href="#crispr_millipede">Learn more</a></li>
+							<li style="padding-top: 15px"><span style="font-size: 20px;">Full-stack web development of
+									transcription-factor motif database</span><br /><a href="#motif_central">Learn
+									more</a></li>
+							<li style="padding-top: 15px"><span style="font-size: 20px;">Applying variant-to-function
+									assay to identify therapeutic targets for beta-hemoglobinopathies</span><br /><a
+									href="#hbf">Learn more</a></li>
+
+						</ul>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="fh5co-blog-style-1">
-			<div class="container">
-				<div class="row p-b">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="1s"
-							data-wow-delay=".5s">View Other Pages</h2>
-						<p class="wow fadeInUp" data-wow-duration="1s"
-							data-wow-delay=".8s">Click on one of the following thumbnails
-							to navigate to my other pages!</p>
+
+			<div class="container" id="crispr_millipede">
+				<div class="row p-b ">
+					<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+						CRISPR-Millipede
+					</h2>
+					<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+						style="color: #040947; margin-top: 25px;">
+						<span style="font-size: 25px;">Establishing a CRISPR-based variant-to-function assay to
+							investigate a novel CD19 enhancer to inform CAR-T therapies</span>
+					</p>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							This is the first chapter of my PhD thesis work, where I established a high-resolution
+							CRISPR-based variant-to-function framework to understand non-coding regulatory sequences.
+							This project <strong>led to a first-author manuscript</strong> (provisionally accepted at
+							Nature
+							Communications) and is available as a preprint on <a
+								href="https://www.biorxiv.org/content/10.1101/2024.09.09.612085v1.full"
+								target="_blank">bioRxiv</a>.<br /><br /></p>
 					</div>
 				</div>
-				<div class="row p-b">
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft" data-wow-duration="1s"
-							data-wow-delay="1.1s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category">
-									<a th:href="@{/resume}">Open</a>
-								</div>
-								<img src="images/headshot-bash.jpg" alt="Image"
-									class="img-responsive" />
-							</div>
-							<div class="fh5co-post-text">
-								<h3>
-									<a th:href="@{/resume}">Résumé</a>
-								</h3>
-								<p>Review my skills, experiences, and traits.</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a th:href="@{/resume}"><i class="icon-clock2"></i>Résumé last
-									updated on 9/24/16</a>
-							</div>
+				<div class="row p-b ">
+					<div class="col-md-5 col-md-push-7 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
+						style="text-align: center;">
+						<div class="col-xl-4">
+							<img src="images/cd19_img1.jpg" alt="Image" width="100%"
+								style="max-height: 500px; max-width: 400px;" class=" img-thumbnail" /> <br /> <br />
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft" data-wow-duration="1s"
-							data-wow-delay="1.4s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category">
-									<a href="#">Open</a>
-								</div>
-								<img src="images/code-bash.jpg" alt="Image"
-									class="img-responsive" />
-							</div>
-							<div class="fh5co-post-text">
-								<h3>
-									<a href="#">Portfolio</a>
-								</h3>
-								<p>Review my past, present, and future projects.</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a href="#"><i class="icon-clock2"></i>Portfolio last
-									updated on 9/24/16</a>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
-						<div class="fh5co-post wow fadeInLeft" data-wow-duration="1s"
-							data-wow-delay="1.7s">
-							<div class="fh5co-post-image">
-								<div class="fh5co-overlay"></div>
-								<div class="fh5co-category">
-									<a th:href="@{/aboutme}">Open</a>
-								</div>
-								<a th:href="@{/aboutme}"> <img src="images/personal-bash.jpg"
-									alt="Image" class="img-responsive" />
-								</a>
-							</div>
-							<div class="fh5co-post-text">
-								<h3>
-									<a th:href="@{/aboutme}">About Me</a>
-								</h3>
-								<p>Learn a little more of my personal side.</p>
-							</div>
-							<div class="fh5co-post-meta">
-								<a th:href="@{/aboutme}"><i class="icon-clock2"></i>About Me
-									last updated on 9/24/2016</a>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-md-offset-4 text-center wow fadeInUp"
-						data-wow-duration="1s" data-wow-delay="2s">
-						<a th:href="@{/contact}" class="btn btn-primary btn-lg">Contact
-							Me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="fh5co-footer-style-3">
-			<div class="container">
-				<div class="row p-b">
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
-						data-wow-duration="1s" data-wow-delay=".5s">
-						<div class="fh5co-logo">Created by Basheer</div>
-						<p class="fh5co-copyright">
-							&copy; 2016 Basheer Becerra <br />All Rights Reserved.
+
+					<div class="col-md-7 col-md-pull-5">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+							style="font-size: 15px; padding-top: 100px;">
+							<strong>We investigated a putative regulatory element upstream of the CD19 gene</strong>, a
+							B-cell marker and
+							immunotherapy target in pediatric and adult B-cell acute lymphoblastic leukemia (B-ALL) and
+							lymphoma. The candidate regulatory element was identified based on the presence of a highly
+							evolutionary conserved and open chromatin region in proximity to the CD19 gene, as
+							indicated by ATAC-seq and H3K27ac ChIP-seq.
 						</p>
 					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
-						data-wow-duration="1s" data-wow-delay=".5s">
-						<h3>Professional Accounts</h3>
-						<ul class="fh5co-links fh5co-social">
-							<li><a href="https://www.linkedin.com/in/basheerbecerra"
-								target="_blank"><i class="icon icon-linkedin"></i> Linkedin</a></li>
-						</ul>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
-						data-wow-duration="1s" data-wow-delay=".5s">
-						<h3>Developer Accounts</h3>
-						<ul class="fh5co-links fh5co-social">
-							<li><a href="http://www.github.com/CodingBash"
-								target="_blank"><i class="icon icon-github"></i> GitHub</a></li>
-							<li><a
-								href="http://www.stackoverflow.com/users/3995603/codingbash"
-								target="_blank"><i class="icon icon-stack-overflow"></i>
-									Stack Overflow</a></li>
-						</ul>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp"
-						data-wow-duration="1s" data-wow-delay=".5s">
-						<h3>Social Accounts</h3>
-						<ul class="fh5co-links fh5co-social">
-							<li><a href="#" target="_blank"><i
-									class="icon icon-facebook"></i> Facebook</a></li>
-							<li><a href="#" target="_blank"><i
-									class="icon icon-twitter"></i> Twitter</a></li>
-							<li><a href="#" target="_blank"><i
-									class="icon icon-youtube"></i> YouTube</a></li>
-						</ul>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
 				</div>
-				<div class="row fh5co-made">
-					<div class="col-md-12 wow fadeInUp" data-wow-duration="1s"
-						data-wow-delay=".5s">
-						<p>Made by Basheer Becerra</p>
+				<div class="row p-b ">
+					<div class="col-md-6 col-md-push-6">
+						<div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+							style="font-size: 15px;">
+							<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+								style="font-size: 15px;">
+								<strong>I have designed an experimental approach expanding on traditional base-editing
+									mutagenesis screens.</strong> Dense base-editing mutagenesis allows single-variant
+								mutations to
+								be installed throughout a region of interest, which allows the assessment of each
+								mutation's phenotypic impact based on fluorescence-activated cell sorting (FACS) of CD19
+								expression. <br /><br />
+
+								After sorting, genomic DNA is split between two library preparation approaches, the
+								standard approach that performs amplicon-sequencing of the CRISPR guide RNA integrant,
+								and the second approach which performs direct amplicon-sequencing of the edited genomic
+								locus. Measuring the count of either guide RNA (from the former approach) or installed
+								target allele (from the latter approach) in each sorted cell population can be used to
+								measure phenotypic enrichment of guide RNAs or alleles. <br /><br />
+
+								<strong>We go a step further to generate high-resolution per-nucleotide scores.</strong>
+								We perform
+								Bayesian regression modelling of the target allele enrichment scores using the
+								<i>millipede</i> tool to generate per-nucleotide enrichment scores. <br /><br />
+
+								<strong>SOFTWARE PRODUCED:</strong><br />
+								For this framework, I have developed two primary computational tools. First, I developed
+								CRISPR-Correct, which is a CRISPR guide RNA mapping Python tool that handles
+								self-editing of
+								the protospacer via a hamming-distance approach <a target="_blank"
+									href="https://github.com/pinellolab/CRISPR-Correct">https://github.com/pinellolab/CRISPR-Correct</a>.<br />
+								This framework is also available to run at scale on Cromwell via Broad Institute's Terra
+								platform: <a target="_blank"
+									href="https://github.com/pinellolab/CRISPR-millipede-pipelines/tree/master/WDL/CRISPR-millipede-guideRNA/Terra">https://github.com/pinellolab/CRISPR-millipede-pipelines</a>.<br /><br />
+
+								Second, I developed CRISPR-Millipede, which is a Python tool that performs Bayesian
+								regression modelling of allele enrichment scores to generate per-nucleotide enrichment
+								scores <a target="_blank"
+									href="https://github.com/pinellolab/CRISPR-millipede-target">https://github.com/pinellolab/CRISPR-millipede-target</a>.
+
+
+							</p>
+						</div>
+					</div>
+					<div class=" col-md-6 col-md-pull-6 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
+						style="text-align: center;">
+						<div class="col-xl-4">
+							<img src="images/cd19_img2.jpg" alt="Image" width="100%"
+								style="max-height: 800px; max-width: 500px;margin-top:100px;" class=" img-thumbnail" />
+							<br /> <br />
+							<br /> <br /> <br />
+						</div>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-8 col-md-push-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
+						style="text-align: center;">
+						<img src="images/cd19_img3.jpg" alt="Image" width="100%"
+							style="max-height: 500px; max-width: 500px;" class=" img-thumbnail" /> <br /> <br />
+					</div>
+
+					<div class="col-md-4 col-md-pull-8">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px; ">
+							<strong>The higher-resolution single-nucleotide scores can be used to help disambiguate
+								between
+								annotated
+								transcription-factor binding motifs,</strong> thereby supporting the identification
+							of
+							novel
+							binding
+							sites in non-coding sequences. For instance, we have identified both a MYB site
+							and an
+							IKZF1::PAX5 binding site motif, which are known B-cell regulators. <br /><br />
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-6 col-md-push-6">
+						<div class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+							style="font-size: 15px;">
+							<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+								style="font-size: 15px;padding-top:100px;">
+								<strong>We were interested in if these variants may effect CAR-T therapies.</strong>
+								CD19 is a target of
+								CAR-T cell therapy in B-cell malignancies. Despite initial high
+								success rates, ~35% of B-ALL cases treated with aCD19 CAR-T relapse, with a subset
+								due
+								to loss or downregulation of the CD19 antigen. In a CAR-T targeting assay, we show
+								that
+								functional variants in the CD19 enhancer cause increased resistance to CAR-T
+								targeting.<br /><br />
+
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-md-pull-6 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
+						style="text-align: center;">
+						<div class="col-xl-4">
+							<img src="images/cd19_img4.jpg" alt="Image" width="100%"
+								style="max-height: 800px; max-width: 500px;" class=" img-thumbnail" />
+							<br /> <br />
+							<br /> <br /> <br />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="motif_central">
+				<div class="row p-b ">
+					<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+						MotifCentral.org
+					</h2>
+					<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+						style="color: #040947; margin-top: 25px;">
+						<span style="font-size: 25px;">Developing a full-stack web-application to visualize
+							transcription-factor binding motifs.</span>
+					</p>
+				</div>
+
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<a target="_blank" href="https://motifcentral.org">MotifCentral.org</a> is a full-stack web
+							application to display a database of transcription-factor
+							binding motifs fit by the ProBound statistical model on SELEX-seq datasets. The
+							architecture
+							is comprehensive: accessing stored motif information on <strong>PostgreSQL</strong>
+							(hosted
+							on <strong>Amazon RDS</strong>)
+							via <strong>Spring-Boot (Java)</strong> RESTful web-services (hosted on <strong>Amazon
+								Elastic Beanstalk</strong>) and finally
+							displayed on an <strong>Angular 7</strong> web page (hosted on <strong>Amazon
+								CloudFront</strong>, with the networking handled
+							by <strong>Amazon VPC and Amazon Route53</strong>). The curation and annotations of the
+							model are also done
+							via an administrative privilege on the web application – administrators can log in and
+							authenticate themselves with Amazon Cognito. Users are synced between the <strong>Amazon
+								Cognito</strong>
+							storage and the PostgreSQL database via an <strong>Amazon Lambda</strong> trigger upon
+							user
+							sign-up. <strong>All code
+								was developed before the release of ChatGPT.</strong><br /><br />
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img4.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Screenshot of MotifCentral.</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<h3 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+							The Front-End (with Angular 7)
+						</h3>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							To describe the implementation of the front-end Angular web-app, it is essential to
+							understand the general idea of Angular – specifically, Angular web-apps are organized
+							into
+							components that represents different “sections” of the web page. Components could be
+							reusable across different areas of the site or only have a single instance in the site.
+							Components could be hierarchical (i.e. a component may have several sub-components), and
+							components can communicate and pass data to each other in multitudes of ways. For
+							example,
+							here is an an illustration of some components from the web-page:
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img3.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Illustration of Angular components in MotifCentral.</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							You have the “root-component” which contains the logic for the navigation bar, the
+							footer
+							bar, then the “content” of the page that depends on the URL (known as the
+							<i>router-outlet</i>), see the HTML portion of the root-component here:
+							<a href="https://gist.github.com/CodingBash/e615ab8c8c88a5b1168477ef1fe9e943"
+								target="_blank">https://gist.github.com/CodingBash/e615ab8c8c88a5b1168477ef1fe9e943</a>.<br />
+							<br />
+
+							For example, the component that the router-outlet generates at the root URL (i.e.
+							motifcentral.org) will display the HomeComponent according to the routing specification
+							loaded at app-routing.module.ts:
+							<a href="https://gist.github.com/CodingBash/548d025a9029dd4aad7a33e53c07eeb7"
+								target="_blank">https://gist.github.com/CodingBash/548d025a9029dd4aad7a33e53c07eeb7</a>.<br /><br />
+
+							The home-component primarily loads the factor-table component and helps communicate data
+							between the factor-table-filter component for table filtering and between the
+							in-page fit-details page to display the motif fit for a particular transcription factor
+							if
+							selected. This page contains some extra logic for displaying items necessary for the
+							administrator view only if the user identified is an administrator:
+							<a href="https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40"
+								target="_blank">
+								https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40
+							</a> <br /><br />
+
+							Of course, the first step is to retrieve all the relevant information: the list of all
+							transcription factor models as well as the user information. When the home-component is
+							loaded, one of the first functions called is the ngOnInit function
+							(<a href="https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-public-view-component-ts-L51"
+								target="_blank">https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-public-view-component-ts-L51</a>).
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img5.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>HomeComponent ngOnInit function - retrieval of user and fit information</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							The first step is to retrieve the user information via the UserPrincipalService.
+							Services in
+							angular are general objects used to retrieve, send, and/or handle data that can be
+							“dependency injected” into components for usage. The UserPrincipalService simply
+							contains a
+							singleton object to store the user state as a BehaviorSubject
+							(<a href="https://github.com/CodingBash/cellx-angular-front-end/blob/master/src/app/services/user-principal.service.ts#L11"
+								target="_blank">https://github.com/CodingBash/cellx-angular-front-end/blob/master/src/app/services/user-principal.service.ts#L11</a>)
+							which is a type of object allowing asynchronous access of the user state in an
+							event-driven
+							manner (i.e. if the user state changes, all “listeners” of the BehaviorSubject object
+							will
+							be triggered). The user state is set in the component of the “login” page, which uses
+							the
+							authentication token returned from Cognito to further access the user information
+							(<a href="https://gist.github.com/CodingBash/459458ef3b477af162539ac896e056c3#file-login-component-ts"
+								target="_blank">https://gist.github.com/CodingBash/459458ef3b477af162539ac896e056c3#file-login-component-ts</a>).
+							The token is then sent with every HTTP call to back-end web-service to be validated by
+							REST
+							service endpoints requiring authorization (discussed in back-end section). If an attempt
+							to
+							call an authorized endpoint is made with a non-admin user token, expired token, or
+							fabricated token, the REST endpoint will return an “HTTP 403 Unauthorized” (this will be
+							in the back-end description section).
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img6.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Redirect to login screen from AWS Cognito. If login successful, Cognito redirects
+								back to
+								MotifCentral with a user token.</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							After retrieving the user information, the home-component then retrieves the
+							transcription-factor information
+							(<a href="https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-public-view-component-ts-L65"
+								target="_blank">https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-public-view-component-ts-L65</a>).
+							which uses the factors-service
+							(<a href="https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-factors-service-ts"
+								target="_blank">https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-factors-service-ts</a>)
+							to make REST calls to the appropriate endpoints depending on the environment
+							(development,
+							test, production). <br /><br />
+
+							The next important logic in the home-component page is the table filtering
+							(<a href="https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-public-view-component-html-L24"
+								target="_blank">https://gist.github.com/CodingBash/f91d87ca39c67e08de57382e47f92d40#file-public-view-component-html-L24</a>).
+							The filter was surprisingly more challenging to implement, as the selection of the
+							species
+							or the study must be communicated to the factor-table (through the home-component) to
+							filter
+							the motif fits with the selected attributes. Additionally, information from the
+							factor-table
+							must be communicated back to the filter component to display the available
+							species/studies
+							to select and the total number of motif fits available. This is the advantage of having
+							a
+							parent component to handle data communication (in this case, the home-component) using
+							@Input and @Output directives (<a href="https://v17.angular.io/guide/inputs-outputs"
+								target="_blank">https://v17.angular.io/guide/inputs-outputs</a>). The
+							filter-component
+							needed to be handled in the filter-component to handle when to trigger a change for the
+							components to be updated
+							(<a href="https://gist.github.com/CodingBash/fdb854a485e3186ec3d3ec7adcc799ce#file-factor-table-filter-component-ts-L87"
+								target="_blank">https://gist.github.com/CodingBash/fdb854a485e3186ec3d3ec7adcc799ce#file-factor-table-filter-component-ts-L87</a>).
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img7.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Display of filter component in MotifCentral</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							There are several more logic on displaying the table of factors that won’t be discussed
+							in-depth. For example, displaying the motif logo image has some tricky optimizations
+							that
+							were performed. In the default implementation of the table, all images would be loaded
+							at
+							once, causing the website to become quite slow due to the simultaneous loading and the
+							traffic to the file loading REST service. Therefore, images are only loaded if the
+							element
+							is seen in the screen viewpoint
+							(<a href="https://gist.github.com/CodingBash/2da85d53b958de164b4b7c16dbe49b90"
+								target="_blank">https://gist.github.com/CodingBash/2da85d53b958de164b4b7c16dbe49b90</a>).
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img8.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Dynamic loading of images</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							The last primary aspect of the front-end application is displaying the details of a
+							motif
+							fit when a motif is selected from the home table. The page makes the most of components
+							from
+							the Angular Material UI library (<a
+								href="https://material.angular.dev/components/categories"
+								target="_blank">https://material.angular.dev/components/categories</a>) to display
+							pop-up modals, accordion displays, cards, etc.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img9.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Fit details page</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							Each section of the details page has its own component (i.e. scoring model, quality
+							assessment, etc.). The fit-details-component is the parent component that organizes each
+							of
+							these individual components on the page. These individual components are responsible for
+							making the appropriate REST calls to retrieve data along with populating the Angular
+							Materials component with the retrieved data.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img10.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 400px; " />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>List of all the individual components in the fit details page</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							It is seamless to deploy the Angular website to AWS using AWS CodePipeline’s continuous
+							deployment service. The only manual step to deploy is to push the code to the
+							prod-deployment branch on GitHub, which then triggers CodePipeline to retrieve the source
+							code,
+							build
+							the Angular deployable (with the current environment specification so that all REST
+							calls in
+							the Angular app points to the production endpoints), and store the web files in an
+							Amazon
+							S3 bucket. Amazon CloudFront services the web files to the browser at the configured DNS
+							specified
+							as motifcentral.org, where the domain is handled and managed by Amazon Route53.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img11.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
+							style="max-height: 400px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>CodePipeline interface for deployment of the Angular web page to AWS S3 and
+								CloudFront</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<h3 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+							The Back-End (with Spring Boot, AWS Lambda, and PostgreSQL with AWS RDS)
+						</h3>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							As mentioned previously, the Angular front-end services make several REST calls to
+							retrieve
+							data. The REST services are developed in Java using the Sprint-Boot framework, although
+							most
+							web-frameworks operate in a similar manner, though I find Spring-Boot to be most
+							comprehensive and readable due to its wide usage in large enterprises (i.e. Netflix,
+							AirBnB,
+							Uber,
+							PayPal, etc.). <br /><br />
+
+							Spring-Boot REST services are relatively simple in design. The classes that contain the
+							specifications for the endpoints are termed “Controllers”. For instance, I have a
+							controller
+							called “ComplexSpeciesTreeController” that contains endpoints to retrieve relevant
+							information about the transcription factors
+							(<a href="https://gist.github.com/CodingBash/8217c2019f917f630fd8de51d6ee5f22"
+								target="_blank">https://gist.github.com/CodingBash/8217c2019f917f630fd8de51d6ee5f22</a>).
+							An endpoint is
+							defined as a function that is annotated with @RequestMapping which specifies the URL
+							path
+							(i.e. "/taxcomplexes/search”
+							<a href="https://gist.github.com/CodingBash/8217c2019f917f630fd8de51d6ee5f22#file-complexspeciestreecontroller-java-L75"
+								target="_blank">https://gist.github.com/CodingBash/8217c2019f917f630fd8de51d6ee5f22#file-complexspeciestreecontroller-java-L75</a>)
+							and the request method (i.e. HTTP GET). The function can also be annotated based on the
+							authority of the logged-in user using the @Secured annotation, which specifies rules to
+							allow access to the user. Configuration is required to perform user authentication,
+							specifically providing the endpoints to interact with AWS Cognito for user
+							authentication,
+							and storing user session in an in-memory database using Redis. Spring-Boot handles the
+							specific operations for interacting with Cognito and Redis.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img12.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 700px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Example of an endpoint definition in Spring-Boot</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							Another important software design pattern in Spring-Boot (and also in Angular and
+							several
+							other modern frameworks) is dependency injection. Similar to dependency injection of
+							“services” to retrieve data in Angular, Spring-Boot effectively has the same design of
+							accessing “services” to retrieve data. Specifically, controllers access services to
+							retrieve processed data, and services retrieve and process the raw data from
+							dependency
+							injected “repositories” classes that performs the SQL or REST transactions
+							(<a href="https://gist.github.com/CodingBash/2ac7e305c747ff220d44d0909dc4a71d"
+								target="_blank">https://gist.github.com/CodingBash/2ac7e305c747ff220d44d0909dc4a71d</a>).
+							I also include an endpoint that is used to stream the motif logo images from Amazon S3 to
+							the front-end
+							while
+							handle authentication (<a
+								href="https://gist.github.com/CodingBash/35a40b34240293ea3c5db470a80a8b2c"
+								target="_blank">https://gist.github.com/CodingBash/35a40b34240293ea3c5db470a80a8b2c</a>).
+							No credentials is required for the web-service to access S3 as they exist on the same
+							private VPC, therefore the S3 URLs cannot be accessed from the internet. If a service
+							performs multiple repository calls to access SQL data, Spring-Boot can aggregate all
+							calls
+							as an SQL transaction to ensure data reliability.<br /><br />
+
+							These repositories could be accessed across several services, and services could be
+							accessed
+							across several controller endpoints, therefore dependency injection typically allows a
+							single
+							instance of the class to be shared. I find Spring Boot applications to be much more
+							readable
+							and reliable compared to event-driven and dynamic typecasting frameworks such as
+							Node.JS,
+							which may be why Spring-Boot is preferred in many enterprises.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img13.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Example of a repository function performing an SQL command</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							Deploying REST services are also done using CodePipeline, where a commit to the
+							production
+							GitHub branch triggers a build then deployed onto Elastic Beanstalk. Of course, each
+							step
+							requires configuration to specify the build commands and the deployment operations,
+							though
+							once the configurations are complete, deployment is more quick and reduces chances of
+							mistakes during deployment due to automation.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/motif_img14.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>CodePipeline interface showing deployment of REST service to AWS Elastic
+								Beanstalk</i>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" id="hbf">
+				<div class="row p-b ">
+					<h2 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+						Therapeutic genome editing for sickle-cell disease
+					</h2>
+					<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
+						style="color: #040947; margin-top: 25px;">
+						<span style="font-size: 25px;">Multi-modal dissection of sequences regulating fetal hemoglobin
+							for optimal therapeutic genome editing.</span>
+					</p>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							In this project, I established a multi-modal variant-to-function framework to identify
+							therapeutic targets for beta-hemoglobinopathies in Dr. Luca Pinello and Dr. Dan Bauer labs,
+							specifically expanding upon the first CRISPR gene therapy for sickle-cell disease (CASGEVY)
+							discovered by Dr. Dan Bauer.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<h3 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+							My PhD Trajectory
+						</h3>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							I want to give some background on the significance of this project in terms of scientific
+							training. During my rotations at the start of PhD, I explored different labs and projects
+							with my <strong>early rotations establishing other pre-existing methods on Terra for
+								scalable
+								analysis of cancer samples</strong>, one leading to a <a
+								href="https://aacrjournals.org/cancerdiscovery/article/12/1/172/675589/Rates-and-Patterns-of-Clonal-Oncogenic-Mutations"
+								target="_blank">manuscript</a>. This was great for learning how to perform scalable
+							bioinformatics analysis, though I wanted to further learn how to develop these statistical
+							methods, which I then did to <strong>develop a method for copy-number variant calling from
+								single-cell DNA-sequencing</strong>. While methods development got me closer to the
+							science, I still
+							felt disconnected from the science due to being unfamiliar with the data generation and
+							experimental design, which
+							is a common weakness in bioinformaticians. Therefore, I realized I needed to be in the wet
+							lab learning how to design experiments and how to generate the data.<br /><br />
+
+							Now transitioning into my primary PhD project, it represents my proudest project as
+							<strong>I
+								worked on
+								the project from start to beginning – experimentally establishing the
+								cell-lines, genome editors, high-throughput screening approach, experimental design,
+								etc., computationally establishing the analytical framework, and
+								scientifically leading next-steps on exploring biological results or therapeutic
+								opportunities.</strong>. In fact, by having knowledge in both the experimentation and
+							computation, this leads to better informed experimental design (due to predicting the
+							computational/statistical analysis and understanding what leads to higher statistical power)
+							and better computational analysis (due to better
+							understanding of the underlying data and possible confounders/noise). Additionally, by being
+							directly involved in the entire scope of the project, this leads to being ruthlessly
+							"results-oriented", i.e. performing the experiments necessary to answer the most interesting
+							scientific questions and performing the analysis required to answer the scientific question,
+							in contrast to doing unnecessary/ill-designed experiments or doing unnecessary computational
+							analysis (or analysis that provides minor benefit to answering any scientific question).
+							Therefore, this
+							project represents my ultimate scientific
+							demonstration, with
+							<strong>full understanding across the entire scope leveraging my entire background
+								in biology (for
+								biological interpretation and experimentation), computer science and mathematics (for
+								methods development), and software engineering (for tool development) to identify novel
+								regulatory mechanisms of fetal hemoglobin induction and therapeutic genome editing
+								strategies for
+								sickle-cell disease and beta-thalassemia.</strong> Unfortunately this project is not
+							published yet and contains confidential results regarding the therapeutics, therefore only
+							brief details of the project will be given.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<h3 class="fh5co-heading wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".0s">
+							Project Description
+						</h3>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/hbf_img1.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Schematic of multi-modal framework for dissecting the fetal hemoglobin regulatory
+								sequences.</i>
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12">
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							Transcriptional regulation by non-coding elements and their associated DNA-binding
+							transcription factors (TFs) control the developmental transition from fetal to adult
+							hemoglobin – commonly referred to as “hemoglobin switching”. The reactivation of fetal
+							hemoglobin (HbF) has emerged as a therapeutic avenue for β-hemoglobinopathies such as sickle
+							cell disease and β-thalassemia. Delineating the cis-regulatory logic of sequences governing
+							HBG1 and HBG2, the genes encoding the γ-globin chains of HbF, is essential for understanding
+							hemoglobin switching and developing more effective treatments. While population genetics
+							studies have pinpointed single-nucleotide variants (SNVs) linked to HbF induction, this
+							approach is limited to naturally occurring variation, preventing a comprehensive view of
+							causal regulatory elements. To overcome this limitation, <strong>we have performed a
+								systematic
+								comparison of multiple mutagenesis approaches on HbF regulatory sequences</strong> in
+							immortalized
+							erythroid progenitors (HUDEP-2) to elucidate the variant-level cis-regulatory logic and
+							corresponding TF binding sites underpinning HbF induction. Specifically, we integrated four
+							complementary approaches: <strong><i>in-situ</i> dense adenine- (ABE8e-SpRY) and dual-
+								(TadDE-SpRY)
+								base-editing mutagenesis, <i>in-situ</i> prime-editing saturation mutagenesis,
+								<i>ex-situ</i> massively
+								parallel reporter assay (MPRA) saturation mutagenesis, and <i>in-silico</i> ChromBPNet
+								saturation
+								mutagenesis</strong>. These approaches were performed on the HBG1/2 promoters, BCL11A
+							+55 kb
+							enhancer, and BCL11A +58 kb enhancer given their therapeutic relevance for potent HbF
+							reinduction. This multi-modal screening strategy identified several novel insights into
+							hemoglobin switching and identified multiple novel therapeutic editing strategies. This
+							comprehensive functional mapping obtained across multiple modalities establishes an example
+							of the strengths, weaknesses, and opportunities to combine <i>in situ</i>, <i>ex situ</i>,
+							and <i>in silico</i>
+							approaches to determine the function of regulatory elements as well as provide an optimized
+							therapeutic roadmap for gene therapies.
+						</p>
+					</div>
+				</div>
+				<div class="row p-b ">
+					<div class="col-md-12" style="text-align: center;">
+						<img src="images/hbf_img2.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
+							data-wow-delay=".5s" alt="Image" style="max-height: 800px; max-width: 900px;" />
+						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
+							<i>Example of multi-modality results on BCL11A +58 enhancer. Not showing BCL11A +55 and HBG2
+								Promoter results due to confidentiality.</i>
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- END footer -->
+	</div>
 
-
-
+	<div>
+		<th:block th:include="fragments/fragments :: footer"></th:block>
 	</div>
 	<!-- END page-->
 
@@ -312,4 +993,5 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 </body>
+
 </html>
