@@ -52,7 +52,7 @@
 				scrollTop: $target.offset().top
 			}, 1000, 'easeInOutExpo');
 		});
-	};
+	}; 
 
 	// Parallax
 	var parallax = function() {

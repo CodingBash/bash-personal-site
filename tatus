@@ -1,0 +1,13 @@
+[1mdiff --git a/src/main/resources/static/js/main.js b/src/main/resources/static/js/main.js[m
+[1mindex 58fb934..20dfc53 100644[m
+[1m--- a/src/main/resources/static/js/main.js[m
+[1m+++ b/src/main/resources/static/js/main.js[m
+[36m@@ -52,7 +52,7 @@[m
+ 				scrollTop: $target.offset().top[m
+ 			}, 1000, 'easeInOutExpo');[m
+ 		});[m
+[31m-	};[m
+[32m+[m	[32m};[m[41m [m
+ [m
+ 	// Parallax[m
+ 	var parallax = function() {[m
