@@ -36,6 +36,24 @@
 		});
 	};
 
+	// Smooth anchor scroll
+	var smoothAnchorScroll = function() {
+		$('body').on('click', 'a[href^="#"]', function(e){
+			var hash = this.getAttribute('href');
+			if (!hash || hash === '#' || hash === '#0') {
+				return;
+			}
+			var $target = $(hash);
+			if (!$target.length) {
+				return;
+			}
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $target.offset().top
+			}, 1000, 'easeInOutExpo');
+		});
+	};
+
 	// Parallax
 	var parallax = function() {
 		$(window).stellar();
@@ -199,6 +217,7 @@
 
 		fullHeight();
 		ScrollNext();
+		smoothAnchorScroll();
 		parallax();
 		counter();
 		mobileMenuOutsideClick();
