@@ -132,6 +132,12 @@
 			box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
 		}
 
+		/* Prevent long URLs from causing horizontal scroll */
+		.fh5co-project-style-2 a {
+			overflow-wrap: anywhere;
+			word-break: break-word;
+		}
+
 		.twitter-timeline {
 			max-width: 100%;
 			max-height: 1000px;
@@ -202,9 +208,9 @@
 
 				<div class="row p-b">
 					<div class="col-md-4" style="text-align: center;">
-						<img src="images/labphoto.jpeg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/labphoto.jpeg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 800px; max-width: 300px;" />
+							style="height: auto; max-width: 300px; width: 100%;" />
 					</div>
 					<div class="col-md-8">
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
@@ -254,8 +260,8 @@
 					<div class="col-md-5 col-md-push-7 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
 						style="text-align: center;">
 						<div class="col-xl-4">
-							<img src="images/cd19_img1.jpg" alt="Image" width="100%"
-								style="max-height: 500px; max-width: 400px;" class=" img-thumbnail" /> <br /> <br />
+							<img src="images/cd19_img1.jpg" alt="Image"
+								style="height: auto; max-width: 400px; width: 100%;" class=" img-thumbnail" /> <br /> <br />
 						</div>
 					</div>
 
@@ -310,6 +316,13 @@
 								regression modelling of allele enrichment scores to generate per-nucleotide enrichment
 								scores <a target="_blank"
 									href="https://github.com/pinellolab/CRISPR-millipede-target">https://github.com/pinellolab/CRISPR-millipede-target</a>.
+								<br /> <br />
+
+								Third, I developed CRISPR-Library-Prep, which is a Python tool that performs in-silico
+								simulation of PCR to estimate predicted coverage of guide RNA libraries depending on
+								genomic DNA amount. This tool is used to plan how to split genomic DNA between both
+								library preparation approaches in a statistical rigourous manner: <a target="_blank"
+									href="https://github.com/CodingBash/CRISPR-library-prep/blob/master/crispr_library_prep/crispr_library_prep/CrisprLibraryPrep.py">https://github.com/CodingBash/CRISPR-library-prep</a>.
 
 
 							</p>
@@ -318,8 +331,8 @@
 					<div class=" col-md-6 col-md-pull-6 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
 						style="text-align: center;">
 						<div class="col-xl-4">
-							<img src="images/cd19_img2.jpg" alt="Image" width="100%"
-								style="max-height: 800px; max-width: 500px;margin-top:100px;" class=" img-thumbnail" />
+							<img src="images/cd19_img2.jpg" alt="Image"
+								style="height: auto; max-width: 500px; margin-top:100px; width: 100%;" class=" img-thumbnail" />
 							<br /> <br />
 							<br /> <br /> <br />
 						</div>
@@ -328,8 +341,8 @@
 				<div class="row p-b ">
 					<div class="col-md-8 col-md-push-4 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
 						style="text-align: center;">
-						<img src="images/cd19_img3.jpg" alt="Image" width="100%"
-							style="max-height: 500px; max-width: 500px;" class=" img-thumbnail" /> <br /> <br />
+						<img src="images/cd19_img3.jpg" alt="Image"
+							style="height: auto; max-width: 500px; width: 100%;" class=" img-thumbnail" /> <br /> <br />
 					</div>
 
 					<div class="col-md-4 col-md-pull-8">
@@ -369,8 +382,8 @@
 					<div class="col-md-6 col-md-pull-6 wow fadeInUp" data-wow-duration="0.3s" data-wow-delay=".5s"
 						style="text-align: center;">
 						<div class="col-xl-4">
-							<img src="images/cd19_img4.jpg" alt="Image" width="100%"
-								style="max-height: 800px; max-width: 500px;" class=" img-thumbnail" />
+							<img src="images/cd19_img4.jpg" alt="Image"
+								style="height: auto; max-width: 500px; width: 100%;" class=" img-thumbnail" />
 							<br /> <br />
 							<br /> <br /> <br />
 						</div>
@@ -418,9 +431,9 @@
 				</div>
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
-						<img src="images/motif_img4.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/motif_img4.jpg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 800px; max-width: 900px;" />
+							style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Screenshot of MotifCentral.</i>
 						</p>
@@ -450,9 +463,9 @@
 				</div>
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
-						<img src="images/motif_img3.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/motif_img3.jpg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 800px; max-width: 900px;" />
+							style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Illustration of Angular components in MotifCentral.</i>
 						</p>
@@ -496,9 +509,9 @@
 				</div>
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
-						<img src="images/motif_img5.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/motif_img5.jpg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 800px; max-width: 900px;" />
+							style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>HomeComponent ngOnInit function - retrieval of user and fit information</i>
 						</p>
@@ -536,9 +549,9 @@
 				</div>
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
-						<img src="images/motif_img6.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/motif_img6.jpg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 800px; max-width: 900px;" />
+							style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Redirect to login screen from AWS Cognito. If login successful, Cognito redirects
 								back to
@@ -587,7 +600,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/motif_img7.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Display of filter component in MotifCentral</i>
 						</p>
@@ -612,9 +625,9 @@
 				</div>
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
-						<img src="images/motif_img8.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/motif_img8.jpg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 800px; max-width: 900px;" />
+							style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Dynamic loading of images</i>
 						</p>
@@ -637,7 +650,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/motif_img9.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Fit details page</i>
 						</p>
@@ -658,7 +671,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/motif_img10.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 400px; " />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 500px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>List of all the individual components in the fit details page</i>
 						</p>
@@ -684,9 +697,9 @@
 				</div>
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
-						<img src="images/motif_img11.jpg" class="wow fadeInUp img-thumbnail" width="100%"
+						<img src="images/motif_img11.jpg" class="wow fadeInUp img-thumbnail"
 							data-wow-duration="0.5s" data-wow-delay=".5s" alt="Image"
-							style="max-height: 400px; max-width: 900px;" />
+							style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>CodePipeline interface for deployment of the Angular web page to AWS S3 and
 								CloudFront</i>
@@ -739,7 +752,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/motif_img12.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 700px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Example of an endpoint definition in Spring-Boot</i>
 						</p>
@@ -785,7 +798,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/motif_img13.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Example of a repository function performing an SQL command</i>
 						</p>
@@ -808,7 +821,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/motif_img14.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 400px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>CodePipeline interface showing deployment of REST service to AWS Elastic
 								Beanstalk</i>
@@ -906,7 +919,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/hbf_img1.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 800px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Schematic of multi-modal framework for dissecting the fetal hemoglobin regulatory
 								sequences.</i>
@@ -953,7 +966,7 @@
 				<div class="row p-b ">
 					<div class="col-md-12" style="text-align: center;">
 						<img src="images/hbf_img2.jpg" class="wow fadeInUp img-thumbnail" data-wow-duration="0.5s"
-							data-wow-delay=".5s" alt="Image" style="max-height: 800px; max-width: 900px;" />
+							data-wow-delay=".5s" alt="Image" style="height: auto; max-width: 900px; width: 100%;" />
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s" style="font-size: 15px;">
 							<i>Example of multi-modality results on BCL11A +58 enhancer. Not showing BCL11A +55 and HBG2
 								Promoter results due to confidentiality.</i>
@@ -964,7 +977,7 @@
 					<a th:href="@{/}" class="btn btn-primary">Return to Home Page</a>
 					<a th:href="@{/portfolio}" class="btn btn-secondary">Return to Top</a>
 				</div>
-				<br/><br/>
+				<br /><br />
 			</div>
 		</div>
 	</div>
