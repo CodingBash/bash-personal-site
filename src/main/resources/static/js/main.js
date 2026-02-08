@@ -56,7 +56,70 @@
 
 	// Parallax
 	var parallax = function() {
-		$(window).stellar();
+		var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+		if (isMobile) {
+			var $hero = $('#home-hero');
+			if (!$hero.length) {
+				return;
+			}
+			var ratio = parseFloat($hero.data('stellar-background-ratio')) || 0.2;
+			ratio = Math.max(0.1, Math.min(ratio, 0.2));
+			var ticking = false;
+			var parseBgSize = function(value, base) {
+				if (!value) {
+					return base;
+				}
+				if (value.indexOf('%') !== -1) {
+					return base * (parseFloat(value) / 100);
+				}
+				if (value.indexOf('px') !== -1) {
+					return parseFloat(value);
+				}
+				return base;
+			};
+			var update = function() {
+				var el = $hero[0];
+				var rect = el.getBoundingClientRect();
+				var height = rect.height;
+				var width = rect.width;
+				var styles = window.getComputedStyle(el);
+				var bgSize = styles.backgroundSize.split(' ');
+				var bgW = parseBgSize(bgSize[0], width);
+				var bgH = parseBgSize(bgSize[1] || bgSize[0], height);
+				var extraY = Math.max(0, bgH - height);
+				var y = Math.round(-window.pageYOffset * (1 - ratio));
+				var minY = -extraY;
+				var maxY = 0;
+				if (y < minY) {
+					y = minY;
+				}
+				if (y > maxY) {
+					y = maxY;
+				}
+				$hero.css('background-position', 'center ' + y + 'px');
+				ticking = false;
+			};
+			var onScroll = function() {
+				if (!ticking) {
+					window.requestAnimationFrame(update);
+					ticking = true;
+				}
+			};
+			update();
+			$(window).on('scroll', onScroll);
+			$(window).on('resize', update);
+			return;
+		}
+
+		$(window).stellar({
+			horizontalScrolling: false,
+			verticalScrolling: true,
+			responsive: true,
+			hideDistantElements: false,
+			parallaxBackgrounds: true,
+			parallaxElements: true,
+			disableTouch: false
+		});
 	};
 
 	// Counter

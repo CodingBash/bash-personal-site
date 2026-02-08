@@ -90,10 +90,15 @@
 
 		@media screen and (max-width: 768px) {
 			.fh5co-cover-style-2 {
-				background-size: cover !important;
+				background-size: cover;
 				background-position: center center;
 				background-repeat: no-repeat;
-				background-attachment: scroll;
+				background-attachment: fixed;
+			}
+
+			#home-hero {
+				background-size: auto 150% !important;
+				background-position: center center;
 			}
 		}
 
@@ -107,7 +112,14 @@
 			}
 
 			.fh5co-cover-style-2 {
-				background-position: center top;
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			#home-hero {
+				background-position: center center;
+				background-size: auto 170%;
 			}
 		}
 	</style>
@@ -198,11 +210,11 @@
 	<div id="fh5co-page">
 		<th:block th:include="fragments/fragments :: navbar"></th:block>
 
-		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.5" data-next="yes"
+		<div id="home-hero" class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="0.2" data-next="yes"
 			style="
-       background-image: url(images/bg-bash2.JPG);
-       background-size: 110% 150%;
-     ">
+		background-image: url(images/new_images/commencement2.jpg);
+		background-size: 110% 150%;
+		">
 			<span class="scroll-btn wow fadeInUp" data-wow-duration="0.3s" data-wow-delay="0.4s"> <a href="#"> <span
 						class="mouse">
 						<span></span>
@@ -285,7 +297,7 @@
 					<div class="col-md-12">
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
 							style="color: #040947; margin-top: 25px;">
-							<span style="font-size: 25px;">A summmary of my experience <br /></span><span
+							<span style="font-size: 25px;">A summary of my experience <br /></span><span
 								style="font-size: 17px;">bioinformatics+experimentation+software engineering</span>
 						</p>
 						<ul class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s">
@@ -345,12 +357,13 @@
 								</ul>
 							</li>
 						</ul>
+
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
-							style="color: #040947; margin-top: 25px;">
+							style="color: #040947; margin-top: 60px;">
 							<span style="font-size: 25px;">Personal Statement<br /></span>
 						</p>
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
-							style="font-size: 15px; color: black;">
+							style="font-size: 15px; color: gray;">
 							<strong>Personal Summary:</strong> Ph.D. student at Harvard Medical School developing
 							<strong>CRISPR-based
 								experimental and statistical methods</strong> and <strong>engineering reproducible
@@ -366,7 +379,7 @@
 							submission (manuscript-in-writing).
 						</p>
 						<p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay=".2s"
-							style="font-size: 15px; color: black;">
+							style="font-size: 15px; color: gray;">
 							<strong>Research Interest:</strong> I am generally interested in establishing
 							<strong>high-throughput
 								experimental methods</strong> with corresponding <strong>statistical/computational
