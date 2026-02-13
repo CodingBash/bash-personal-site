@@ -64,6 +64,7 @@
 			}
 			var ratio = parseFloat($hero.data('stellar-background-ratio')) || 0.2;
 			ratio = Math.max(0.1, Math.min(ratio, 0.2));
+			var speedFactor = 0.5;
 			var ticking = false;
 			var parseBgSize = function(value, base) {
 				if (!value) {
@@ -87,7 +88,7 @@
 				var bgW = parseBgSize(bgSize[0], width);
 				var bgH = parseBgSize(bgSize[1] || bgSize[0], height);
 				var extraY = Math.max(0, bgH - height);
-				var y = Math.round(-window.pageYOffset * (1 - ratio));
+				var y = Math.round(-window.pageYOffset * (1 - ratio) * speedFactor);
 				var minY = -extraY;
 				var maxY = 0;
 				if (y < minY) {
